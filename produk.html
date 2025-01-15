@@ -126,6 +126,74 @@
 .share-button:hover {
     background-color: #218838;
 }
+@media (max-width: 1024px) {
+    .hero {
+        padding: 15vh 5vw;
+    }
+    header {
+        padding: 10px 30px;
+    }
+    header nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    .hero {
+        padding: 10vh 5vw;
+    }
+    .featured-products, .blog-section, .footer {
+        padding: 30px 20px;
+    }
+    .product {
+        padding: 30px;
+    }
+    .products-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    .hero {
+        padding: 15vh 5vw;
+    }
+    .hero-content h1 {
+        font-size: 24px;
+    }
+    .hero-content p {
+        font-size: 14px;
+    }
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        padding: 20px 10px;
+    }
+    .footer p {
+        font-size: 12px;
+    }
+}
+
     </style>
 </head>
 <body>
