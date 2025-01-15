@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kritik dan Saran</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling untuk form container */
+.form-container {
+    max-width: 600px; /* Lebar maksimal form */
+    margin: 40px auto; /* Center form secara horizontal */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Heading form */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Styling untuk setiap grup form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label untuk setiap input */
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Input dan textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Mengisi lebar penuh */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Menghindari overflow */
+}
+
+/* Fokus pada input/textarea */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Tombol submit */
+.submit-btn {
+    width: 100%; /* Tombol selebar form */
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SaladKUY</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="keluhan.html">Keluhan</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <div class="form-container">
+        <h2>Form Kritik dan Saran</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="telepon">No. Telepon:</label>
+                <input type="tel" id="telepon" name="telepon" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="kritik">Kritik:</label>
+                <textarea id="kritik" name="kritik" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="saran">Saran:</label>
+                <textarea id="saran" name="saran" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Kirim</button>
+        </form>
+    </div>
+
+    <footer class="footer" style="background-color: #333; padding: 2rem; text-align: center; border-top: 2px solid #ccc;">
+        <div class="footer-content">
+            <h2 style="margin-bottom: 1rem; color: green;">SaladKUY</h2>
+            <p style="color: #555;">Nikmati hidup sehat bersama SaladKUY! Kami hadir untuk menyediakan pilihan makanan segar, sehat, dan lezat untuk Anda.</p>
+            <ul class="social-media" style="list-style: none; padding: 0; margin: 1.5rem 0; display: flex; justify-content: center; gap: 1rem;">
+                <li><a href="https://facebook.com" target="_blank" style="text-decoration: none; color: #4267B2;">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank" style="text-decoration: none; color: #E1306C;">Instagram</a></li>
+                <li><a href="https://twitter.com" target="_blank" style="text-decoration: none; color: #1DA1F2;">Twitter</a></li>
+                <li><a href="https://chat.whatsapp.com/BaOutJJK8xW65Mrs1hcPFP" target="_blank" style="text-decoration: none; color: green;">WhatsApp</a></li>
+            </ul>
+            <nav class="footer-nav" style="margin: 1rem 0;">
+                <a href="about.html" style="margin: 0 1rem; text-decoration: none; color: #555;">About</a>
+                <a href="produk.html" style="margin: 0 1rem; text-decoration: none; color: #555;">Produk</a>
+                <a href="contact.html" style="margin: 0 1rem; text-decoration: none; color: #555;">Contact</a>
+            </nav>
+            <p style="color: #777;">&copy; SaladKUY 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nama = document.getElementById('nama').value;
+            const telepon = document.getElementById('telepon').value;
+            const email = document.getElementById('email').value;
+            const kritik = document.getElementById('kritik').value;
+            const saran = document.getElementById('saran').value;
+
+            const message = `Halo Admin Saladkuy,\n\nSaya ${nama} (No. Telepon: ${telepon}, Email: ${email}) ingin memberikan kritik dan saran:\n\nKritik: ${kritik}\nSaran: ${saran}\n\nTerima kasih.`;
+
+            const whatsappUrl = `https://wa.me/6285712134756?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.products {
+    padding: 60px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.products h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Kolom responsif */
+    gap: 20px; /* Jarak antar item grid */
+    padding: 20px; /* Ruang di sekeliling grid */
+}
+
+
+/* Styling untuk setiap produk */
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display:flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    justify-content: space-between; /* Memastikan konten terdistribusi dengan baik */
+    height: auto; /* Sesuaikan tinggi produk */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-5px); /* Bergerak ke kiri */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.product img {
+    animation: slide 3s infinite; /* Terapkan animasi ke gambar */
+}
+
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Container untuk gambar produk */
+.product-image-container {
+    width: 100%;
+    height: 150px; /* Sesuaikan tinggi sesuai kebutuhan */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+    border-radius: 8px;
+}
+
+.product h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Styling untuk tombol aksi */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Menambahkan jarak antara tombol */
+    margin-top: 15px;
+}
+
+.button, .share-button {
+    flex: 1; /* Membuat tombol mengambil ruang yang sama */
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center; /* Memastikan teks berada di tengah */
+    white-space: nowrap; /* Mencegah teks tombol melipat ke baris baru */
+    overflow: hidden; /* Mencegah teks melampaui batas tombol */
+    text-overflow: ellipsis; /* Menambahkan ellipsis jika teks terlalu panjang */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.share-button {
+    background-color: #28a745;
+}
+
+.share-button:hover {
+    background-color: #218838;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SaladKUY</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="keluhan.html">Keluhan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SaladKUY</h1>
+            <p>"Fresh, Healthy, and Delicious – That’s Our Promise!"</p>
+            <a href="Produk.html">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="products">
+        <h3>Daftar Produk SALADKUY</h3>
+        <div class="product-list">
+            <div class="product" onclick="animateProduct(this)">
+                <img src="https://i.pinimg.com/474x/f0/d2/8b/f0d28b55c5cb03a424eae5e5c49d8d96.jpg" alt="salad">
+                <h4>Salad Buah 500ml</h4>
+                <p>Rp 30.000</p>
+                <div class="action-buttons">
+                    <a href="payment.html" class="button" >Buy Now</a>
+                    <button class="share-button" onclick="shareProduct('Kaos Polos Black')">Share</button>
+                </div>
+            </div>
+            <div class="product" onclick="animateProduct(this)">
+                <img src="https://i.pinimg.com/474x/87/d8/1c/87d81c4a632e5396f8dad2d60eca4a08.jpg" alt="Salad Sayur">
+                <h4>Salad Sayur</h4>
+                <p>Rp 20.000</p>
+                <div class="action-buttons mb-2">
+                    <a href="payment.html" class="button" >Buy Now</a>
+                    <button class="share-button" onclick="shareProduct('Kaos Polos White')">Share</button>
+                </div>
+            </div>
+            <div class="product" onclick="animateProduct(this)">
+                <img src="https://i.pinimg.com/474x/36/47/9d/36479d763225455d2e86078ed88ef979.jpg" alt="jasuke" width="500px" height="500px">
+                <h4>Jasuke</h4>
+                <p>Rp 10.000</p>
+                <div class="action-buttons">
+                    <a href="payment.html" class="button" >Buy Now</a>
+                    <button class="share-button" onclick="shareProduct('Kaos Polos White')">Share</button>
+                </div>
+            </div>
+            <div class="product" onclick="animateProduct(this)">
+                <img src="https://i.pinimg.com/474x/93/ec/b2/93ecb20106341cd9daa640e50a61f462.jpg" alt="jus">
+                <h4>Jus Buah</h4>
+                <p>Rp 10.000</p>
+                <div class="action-buttons">
+                    <a href="payment.html" class="button" >Buy Now</a>
+                    <button class="share-button" onclick="shareProduct('Kaos Polos White')">Share</button>
+                </div>
+            </div>
+            <div class="product" onclick="animateProduct(this)">
+                <img src="https://i.pinimg.com/474x/fe/fb/24/fefb248e9d0272ee659354bbe74953de.jpg" alt="jus">
+                <h4>Salad Buah 300ml</h4>
+                <p>Rp 15.000</p>
+                <div class="action-buttons">
+                    <a href="payment.html" class="button" >Buy Now</a>
+                    <button class="share-button" onclick="shareProduct('Kaos Polos White')">Share</button>
+                </div>
+            </div>
+            <div class="product" onclick="animateProduct(this)">
+                <img src="https://i.pinimg.com/474x/41/55/8e/41558e07f2c79bd317c7aa50ed015260.jpg" alt="jus">
+                <h4>Mango Sticky Rice</h4>
+                <p>Rp 20.000</p>
+                <div class="action-buttons">
+                    <a href="payment.html" class="button" >Buy Now</a>
+                    <button class="share-button" onclick="shareProduct('Kaos Polos White')">Share</button>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer" style="background-color: #333; padding: 2rem; text-align: center; border-top: 2px solid #ccc;">
+        <div class="footer-content">
+            <h2 style="margin-bottom: 1rem; color: green;">SaladKUY</h2>
+            <p style="color: #555;">Nikmati hidup sehat bersama SaladKUY! Kami hadir untuk menyediakan pilihan makanan segar, sehat, dan lezat untuk Anda.</p>
+            <ul class="social-media" style="list-style: none; padding: 0; margin: 1.5rem 0; display: flex; justify-content: center; gap: 1rem;">
+                <li><a href="https://facebook.com" target="_blank" style="text-decoration: none; color: #4267B2;">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank" style="text-decoration: none; color: #E1306C;">Instagram</a></li>
+                <li><a href="https://twitter.com" target="_blank" style="text-decoration: none; color: #1DA1F2;">Twitter</a></li>
+                <li><a href="https://chat.whatsapp.com/BaOutJJK8xW65Mrs1hcPFP" target="_blank" style="text-decoration: none; color: green;">WhatsApp</a></li>
+            </ul>
+            <nav class="footer-nav" style="margin: 1rem 0;">
+                <a href="about.html" style="margin: 0 1rem; text-decoration: none; color: #555;">About</a>
+                <a href="produk.html" style="margin: 0 1rem; text-decoration: none; color: #555;">Produk</a>
+                <a href="contact.html" style="margin: 0 1rem; text-decoration: none; color: #555;">Contact</a>
+            </nav>
+            <p style="color: #777;">&copy; SaladKUY 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Share product functionality
+        function shareProduct(productName) {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Produk Toko Seven',
+                    text: 'Lihat produk ini: ' + productName,
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Successful share');
+                }).catch((error) => {
+                    console.log('Error sharing', error);
+                });
+            } else {
+                alert('Fitur berbagi tidak didukung di perangkat ini.');
+            }
+        }
+
+        // Bounce animation for clicked product
+        function animateProduct(element) {
+            element.classList.add('clicked');
+            setTimeout(() => {
+                element.classList.remove('clicked');
+            }, 500); // Setelah animasi selesai, hapus kelas 'clicked'
+        }
+
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', function () {
+            const products = document.querySelectorAll('.product');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-on-scroll');
+                        observer.unobserve(entry.target); // Unobserve setelah animasi pertama kali
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            products.forEach(product => {
+                observer.observe(product);
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
+

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pembayaran</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #dfd1eb;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ff5733;
+            background-color: rgba(255, 87, 51, 0.1);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .payment-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .payment-option:hover {
+            background-color: #f0f0f0;
+            border-color: #007bff;
+        }
+
+        .payment-option img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .payment-option label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-back {
+            background-color: #6c757d;
+            color: #fff;
+        }
+
+        .button-back:hover {
+            background-color: #5a6268;
+        }
+
+        .button-submit {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .button-submit:hover {
+            background-color: #218838;
+        }
+
+        .rekening-info {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9; /* Warna latar belakang yang lembut */
+    border: 1px solid #ddd; /* Bingkai dengan warna ringan */
+    border-radius: 8px; /* Membuat sudut membulat */
+    font-size: 16px; /* Ukuran font yang mudah dibaca */
+    color: #333; /* Warna teks */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.rekening-info p {
+    margin: 0;
+    padding: 5px 0;
+    font-weight: 500; /* Memberikan penekanan pada teks */
+    line-height: 1.5; /* Membuat teks lebih mudah dibaca */
+    text-align: center; /* Teks rata tengah */
+}
+
+.rekening-info strong {
+    color: #007bff; /* Warna biru untuk menonjolkan bagian penting */
+}
+
+@media (max-width: 768px) {
+    .rekening-info {
+        font-size: 14px; /* Mengurangi ukuran font pada layar kecil */
+        padding: 10px; /* Menyesuaikan padding */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SaladKUY</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="keluhan.html">Keluhan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="payment-container">
+        <h2>Form Pembayaran</h2>
+        <form id="paymentForm">
+            <div class="payment-option">
+                <input type="radio" id="bca" name="payment" value="BCA" data-rekening="4600304807" data-pemilik="Muhammad Faizal">
+                <img src="https://i.pinimg.com/474x/45/fd/74/45fd7472cebbfe3d4a4217aac009aad6.jpg" alt="BCA">
+                <label for="bca">Transfer BCA</label>
+            </div>
+
+            <div class="payment-option">
+                <input type="radio" id="dana" name="payment" value="DANA" data-rekening="0858-8035-2854" data-pemilik="Arif Maulana">
+                <img src="https://i.pinimg.com/474x/33/70/c5/3370c58ee958173b7935bf5d0deb8553.jpg" alt="DANA">
+                <label for="dana">DANA</label>
+            </div>
+
+            <div class="payment-option">
+                <input type="radio" id="ovo" name="payment" value="OVO" data-rekening="0858-8035-2854" data-pemilik="Arif Maulana">
+                <img src="https://i.pinimg.com/474x/61/c9/8a/61c98a1dffc2e04424d592564cef941f.jpg" alt="OVO">
+                <label for="ovo">OVO</label>
+            </div>
+
+            <div class="payment-option">
+                <input type="radio" id="gopay" name="payment" value="GoPay" data-rekening="0857-1213-4756" data-pemilik="Muhammad Faizal">
+                <img src="https://i.pinimg.com/474x/02/8b/92/028b92bb43a9f6c80e26c3ea403cb698.jpg" alt="GoPay">
+                <label for="gopay">GoPay</label>
+            </div>
+
+            <div class="rekening-info" id="rekeningInfo">
+                <p>Silakan pilih metode pembayaran untuk melihat detail rekening.</p>
+            </div>
+            
+            <div class="payment-option">
+                <label for="proof">Unggah Bukti Transfer:</label>
+                <input type="file" id="proof" name="proof" accept="image/*" required>
+            </div>
+
+
+            <div class="button-group">
+                <button type="button" class="button button-back" onclick="goBack()">Kembali</button>
+                <button type="submit" class="button button-submit">Konfirmasi</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Fungsi kembali
+        function goBack() {
+            window.history.back();
+        }
+
+        // Menampilkan detail rekening berdasarkan pilihan
+        const paymentOptions = document.querySelectorAll('input[name="payment"]');
+        const rekeningInfo = document.getElementById('rekeningInfo');
+
+        paymentOptions.forEach(option => {
+            option.addEventListener('change', function () {
+                const rekening = this.getAttribute('data-rekening');
+                const pemilik = this.getAttribute('data-pemilik');
+                rekeningInfo.innerHTML = `
+                    <p>Nomor Rekening: <strong>${rekening}</strong></p>
+                    <p>Nama Pemilik: <strong>${pemilik}</strong></p>
+                `;
+            });
+        });
+
+        // Fungsi submit form
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+            const whatsappNumber = "https://chat.whatsapp.com/BaOutJJK8xW65Mrs1hcPFP"; // Ganti dengan nomor WhatsApp tujuan
+            const message = `Halo, saya telah melakukan pembayaran menggunakan ${paymentMethod}. Bukti transfer telah saya lampirkan.`;
+
+            const confirmMessage = `Pembayaran berhasil dikonfirmasi. Kami akan menghubungi Anda melalui WhatsApp.`;
+            alert(confirmMessage);
+
+            // Buka WhatsApp
+            const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappLink, '_blank');
+        });
+    </script>
+</body>
+</html>

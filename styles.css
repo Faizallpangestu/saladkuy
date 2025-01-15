@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #dfd1eb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap:wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Efek transisi */
+}
+
+header nav ul li a:hover {
+    color: #ff5733; /* Warna teks saat hover */
+    background-color: rgba(255, 87, 51, 0.1); /* Warna latar belakang saat hover */
+    border-radius: 5px; /* Membuat sudut melengkung */
+    padding: 5px 10px; /* Menambahkan padding untuk efek yang lebih baik */
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(https://i.pinimg.com/474x/53/87/30/538730ad57aa26826534550e07259d07.jpg);
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20vh 10vw;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(75, 73, 73, 0.5);
+}
+
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px;
+        background-size: contain;
+    }
+}
+
+.hero img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-content a {
+    text-decoration: none;
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.featured-products, .blog-section, .footer {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.featured-products h2, .blog-section h2, .footer h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: #dfd1eb;
+    padding: 60px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.blog-section {
+    padding: 50px 20px;
+    background-image: url('https://i.pinimg.com/736x/dc/bf/09/dcbf09334b88a24e7ebb9ef24a52657e.jpg'); /* Ganti dengan URL gambar yang diinginkan */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff; /* Warna teks agar kontras dengan latar belakang */
+    text-align: center;
+    position: relative;
+}
+
+.blog-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay untuk meningkatkan keterbacaan teks */
+    z-index: 1;
+}
+
+.blog-section * {
+    position: relative;
+    z-index: 2;
+}
+
+.blog-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.blog-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.blog-section a {
+    text-decoration: none;
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}

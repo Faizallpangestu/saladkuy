@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #dfd1eb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Efek transisi */
+}
+
+header nav ul li a:hover {
+    color: #ff5733; /* Warna teks saat hover */
+    background-color: rgba(255, 87, 51, 0.1); /* Warna latar belakang saat hover */
+    border-radius: 5px; /* Membuat sudut melengkung */
+    padding: 5px 10px; /* Menambahkan padding untuk efek yang lebih baik */
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(https://i.pinimg.com/474x/53/87/30/538730ad57aa26826534550e07259d07.jpg);
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20vh 10vw;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(75, 73, 73, 0.5);
+}
+
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px;
+        background-size: contain;
+    }
+}
+
+.hero img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-content a {
+    text-decoration: none;
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Gaya untuk section hero */
+.hero {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 1.5rem;
+    color: #0a0606;
+    margin-top: 10px;
+}
+
+/* Gaya untuk section contact */
+.contact {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    color: #25D366; /* Warna hijau WhatsApp */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Gaya untuk iframe Google Maps */
+.contact iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .contact h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact p {
+        font-size: 0.9rem;
+    }
+
+    .contact iframe {
+        height: 300px;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">SaladKUY</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="keluhan.html">Keluhan</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <section class="blog-section">
+        <h3>Lokasi Toko</h3>
+        <p>Alamat: Jl. Raya Teuku Umar No.1, Wanasari, Kec. Cibitung, Kabupaten Bekasi, Jawa Barat 17520</p>
+        <p>Hubungi kami: <a href="https://chat.whatsapp.com/BaOutJJK8xW65Mrs1hcPFP" id="whatsappLink" target="_blank">WhatsApp</a></p>
+
+        <!-- Menambahkan Google Maps Embed -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9794180924164!2d107.0781742250729!3d-6.266436943722248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f672da3d72f%3A0x2535141fc1994a25!2sPasar%20Induk%20Cibitung%2CUD.KBM%20BASTANTA%20Supplier%20jeruk%20medan!5e0!3m2!1sid!2sid!4v1729230100284!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer class="footer" style="background-color: #333; padding: 2rem; text-align: center; border-top: 2px solid #ccc;">
+        <div class="footer-content">
+            <h2 style="margin-bottom: 1rem; color: green;">SaladKUY</h2>
+            <p style="color: #555;">Nikmati hidup sehat bersama SaladKUY! Kami hadir untuk menyediakan pilihan makanan segar, sehat, dan lezat untuk Anda.</p>
+            <ul class="social-media" style="list-style: none; padding: 0; margin: 1.5rem 0; display: flex; justify-content: center; gap: 1rem;">
+                <li><a href="https://facebook.com" target="_blank" style="text-decoration: none; color: #4267B2;">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank" style="text-decoration: none; color: #E1306C;">Instagram</a></li>
+                <li><a href="https://twitter.com" target="_blank" style="text-decoration: none; color: #1DA1F2;">Twitter</a></li>
+                <li><a href="https://chat.whatsapp.com/BaOutJJK8xW65Mrs1hcPFP" target="_blank" style="text-decoration: none; color: green;">WhatsApp</a></li>
+            </ul>
+            <nav class="footer-nav" style="margin: 1rem 0;">
+                <a href="about.html" style="margin: 0 1rem; text-decoration: none; color: #555;">About</a>
+                <a href="produk.html" style="margin: 0 1rem; text-decoration: none; color: #555;">Produk</a>
+                <a href="contact.html" style="margin: 0 1rem; text-decoration: none; color: #555;">Contact</a>
+            </nav>
+            <p style="color: #777;">&copy; SaladKUY 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Notifikasi saat halaman dimuat
+        window.onload = function() {
+            alert("Selamat datang di SaladKUY! Jika Anda memiliki pertanyaan, silakan hubungi kami melalui WhatsApp.");
+        };
+
+        // Efek saat mengklik tautan WhatsApp
+        document.getElementById('whatsappLink').addEventListener('click', function() {
+            alert("Anda akan diarahkan ke WhatsApp untuk menghubungi kami.");
+        });
+    </script>
+    
+</body>
+
+</html>
